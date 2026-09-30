@@ -5,7 +5,7 @@ Route into Railway's private network.
 Run an exit node.
 No `NET_ADMIN`, no TUN device, no problem.
 
-<!-- TODO: add the Deploy on Railway button once the template is published -->
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/netbird)
 
 ## How it works
 
