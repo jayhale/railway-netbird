@@ -5,7 +5,8 @@ Route into Railway's private network.
 Run an exit node.
 No `NET_ADMIN`, no TUN device, no problem.
 
-<!-- TODO: add the Deploy on Railway button once the template is published -->
+<!-- TODO: replace TEMPLATE_CODE with the published template's code -->
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/TEMPLATE_CODE)
 
 ## How it works
 
