@@ -21,20 +21,19 @@ On top of the upstream image, this recipe:
 
 ## Configuration
 
-### Attach a volume
+### Persist state on a volume
 
-Attach a volume and point NetBird's state at it.
-NetBird keeps its WireGuard key and peer identity there.
-Without the volume, every redeploy registers a brand-new peer and leaves the old one behind in your dashboard.
+NetBird keeps its WireGuard key and peer identity on a volume.
+Without it, every redeploy registers a brand-new peer and leaves the old one behind in your dashboard.
 
-The template sets these to follow the volume's mount path, so you can mount it anywhere:
+The template points NetBird's state at the volume's mount path for you, so there's nothing to set, even if you change the mount path:
 
 ```sh
 NB_STATE_DIR="${{RAILWAY_VOLUME_MOUNT_PATH}}"
 NB_CONFIG="${{RAILWAY_VOLUME_MOUNT_PATH}}/config.json"
 ```
 
-If you deploy without the template, set them yourself, or mount the volume at `/var/lib/netbird`, which is the upstream image's default.
+If you deploy without the template, attach a volume and set these two variables yourself, or mount the volume at `/var/lib/netbird`, which is the upstream image's default.
 
 ### Set your NetBird setup key
 
